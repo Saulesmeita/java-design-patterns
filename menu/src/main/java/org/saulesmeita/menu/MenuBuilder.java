@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Builds a simple text menu for a console application.
+ * <p>
+ * {@snippet :
+ *  var menu = new MenuBuilder()
+ *          .title("Menu Title")
+ *          .add("Menu Item", () -> System.out.println("Hello, World!"))
+ *          .build();
+ *
+ *  menu.run();
+ * }
+ */
 public class MenuBuilder {
     private static final Scanner scanner = new Scanner(System.in);
     private final List<Entry> menu = new ArrayList<>();
@@ -25,6 +37,7 @@ public class MenuBuilder {
         return this;
     }
 
+    @SuppressWarnings("squid:S106")
     public Runnable build() {
         return () -> {
             do {
