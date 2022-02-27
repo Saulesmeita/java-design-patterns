@@ -2,6 +2,8 @@ package org.saulesmeita.matrix;
 
 public class Main {
     public static void main(String[] args) {
-        new MatrixProcessor().run();
+        new Application(
+                new ProcessorImplementation()
+        ).run();
     }
 }

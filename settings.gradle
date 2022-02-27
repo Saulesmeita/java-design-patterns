@@ -1,5 +1,4 @@
 rootProject.name = 'design-patterns'
 include 'menu'
 include 'matrix'
-include 'readability'
 
