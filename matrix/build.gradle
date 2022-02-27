@@ -1,11 +1,26 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group 'org.saulesmeita'
 version '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
 repositories {
     mavenCentral()
 }
 
+dependencies {
+    implementation project(':menu')
+}
+
+application {
+    mainClass = 'org.saulesmeita.matrix.Main'
+}
+
+run {
+    standardInput = System.in
+}
