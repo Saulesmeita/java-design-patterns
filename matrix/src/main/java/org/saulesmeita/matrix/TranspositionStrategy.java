@@ -4,7 +4,10 @@ import java.util.function.IntFunction;
 import java.util.function.IntToDoubleFunction;
 import java.util.function.IntUnaryOperator;
 
-public enum Transposition {
+/**
+ * Strategies for matrix transposition
+ */
+public enum TranspositionStrategy {
     MAIN_DIAGONAL(size -> i -> i / size + i % size * size),
     SIDE_DIAGONAL(size -> i -> size * (size - i % size) - i / size - 1),
     VERTICAL_AXIS(size -> i -> size - i % size - 1 + i / size * size),
@@ -12,7 +15,7 @@ public enum Transposition {
 
     private final IntFunction<IntUnaryOperator> function;
 
-    Transposition(final IntFunction<IntUnaryOperator> function) {
+    TranspositionStrategy(final IntFunction<IntUnaryOperator> function) {
         this.function = function;
     }
 

@@ -116,13 +116,13 @@ public interface Matrix {
      * @return a new transposed matrix
      * @throws IllegalArgumentException if matrix is not a square
      */
-    default Matrix transpose(final Transposition mode) {
+    default Matrix transpose(final TranspositionStrategy mode) {
         requireSquareMatrix();
         return Matrix.create(rows(), cols(), mode.getFormula(this));
     }
 
     default Matrix transpose() {
-        return transpose(Transposition.MAIN_DIAGONAL);
+        return transpose(TranspositionStrategy.MAIN_DIAGONAL);
     }
 
     /**
