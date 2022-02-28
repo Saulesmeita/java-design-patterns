@@ -47,5 +47,5 @@ The project contains an interface `ProcessorFacade` and an implementation `Proce
 
 ### Strategy Pattern
 
-To transpose a matrix the project uses different strategies described in the class 'TranspositionStrategy'.
+To transpose a matrix the project uses different strategies described in the class `TranspositionStrategy`.
 
